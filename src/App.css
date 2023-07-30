@@ -1,12 +1,22 @@
+body{
+  margin: 0;
+  padding: 0;
+  background: linear-gradient(#13466d,#50156b71, #0d1423);
+}
+.container{
+  width: 100%;
+  height: 100%;
+  align-content: cover;
+  margin: 10px 200px 200px 200px;
+  padding: 10px 200px 100px;  
+}
 .App {
   display: grid;
   grid-template-areas: 'myArea myArea myArea myArea myArea ';
   gap: 4px;
-  
+  max-width: 100%;
   text-align: center;
-  background-image: url(https://img.freepik.com/free-photo/top-view-background-beautiful-white-grey-brown-cream-blue-background_140725-72219.jpg);
-  background-size: cover;
-  background-repeat: no-repeat; 
+  
 }
 .box{
   grid-area: myArea;
@@ -14,7 +24,7 @@
   height: 100%;
   font-family: Arial, Helvetica, sans-serif;
   font-size: large;
-  color: rgb(61, 86, 107);
+  color: rgb(23, 24, 26);
 }
 .box2{
   grid-area: myArea ;
@@ -26,39 +36,40 @@
   color: rgb(61, 86, 107);
 }
 .mybtn{
-  background-color: rgb(14, 143, 89);
+  background-color: rgb(28, 28, 170);
   border-radius: 8px;
   border: none;
   width: 16rem;
   color: white;
+  cursor: pointer;
 }
 .area, .input, .select{
   width: 16rem;
   border-radius: 8px;
+  margin: 2px;
 }
 .select {
   text-align: center;
 }
 .title{
-  font-family: Arial, Helvetica, sans-serif;
+  font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
   margin-bottom: 10px;
-  color: rgb(28, 28, 170);
+  color: rgb(34, 7, 68);  
 }
 .main{
-  background-color: bisque;
+  background-color: rgb(176, 184, 218);
+  height: 200px;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 .main p{
   text-align: center;
 }
 .cards{
   transition: transform 500ms ease;
-  box-shadow: 8px 8px 8px 8px  rgba(128, 128, 128, 0.199);
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 25);
+  border-radius: 20px;
 }
 .cards:hover {
   transform: scale(1.05);
-}
-.search{
-  width: 6rem;
-  height: 2rem;
-  border-radius: 8px;
 }

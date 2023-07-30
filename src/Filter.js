@@ -17,11 +17,19 @@ export default function Filter({ filmList, setFiltered }){
   }
 
     return<>
-    <div className="mb-3 box2"> 
+    <div className="mb-3"> 
         <br/>
-        <input className='input' type="text" placeholder="filter by title" onChange={handleFilterChange} value={filterInput} />
+        <input 
+          className='input' 
+          type="text" 
+          value={filterInput} 
+          placeholder="filter by title" 
+          onChange={handleFilterChange}           
+        />
         <br/>
-        <select className='select' value={filterRating} placeholder="filter by rating" onChange={(e) => setFilterRating(e.target.value)}>
+        <label style={{color:'white'}}>filter by rating</label>
+        <br/>
+        <select className='select' value={filterRating} onChange={(e) => setFilterRating(e.target.value)}>
             <option value={1}>1</option>
             <option value={2}>2</option>              
             <option value={3}>3</option>
@@ -29,7 +37,7 @@ export default function Filter({ filmList, setFiltered }){
             <option value={5}>5</option>
         </select> 
         <br/>
-        <Button className='search' onClick = {handleOnClickFilterChange} >
+        <Button className='mybtn' onClick = {handleOnClickFilterChange} >
          Apply Filter
         </Button>
     </div>
